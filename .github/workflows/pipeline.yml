@@ -46,9 +46,7 @@ jobs:
 
       # ❌ PASSO A IMPLEMENTAR — Secrets Scanning com Gitleaks
       # Dica: use a action oficial "gitleaks/gitleaks-action@v2" e passe o
-      - name: 🔑 Secrets Scanning
-        
-        run: echo "TODO - implemente o Secrets Scanning com Gitleaks aqui"
+      - name: 🔑 Secrets Scanning   
         uses: gitleaks/gitleaks-action@v2
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -57,8 +55,6 @@ jobs:
       # Dica: instale com "pip install semgrep" e rode
       #   semgrep scan --config auto --config p/xss --error src/
       - name: 🔍 SAST - Semgrep
-        
-        run: echo "TODO - implemente o SAST com Semgrep aqui"
         uses: returntocorp/semgrep-action@v1
         with:
           auditOnInvalidConfig: true
@@ -73,8 +69,6 @@ jobs:
       # E rode:
       #   grype dir:. --fail-on medium
       - name: 📦 SCA - Grype
-        
-        run: echo "TODO - implemente o SCA com Grype aqui"
         uses: anchore/scan-action@v3
         with:
           path: "."
