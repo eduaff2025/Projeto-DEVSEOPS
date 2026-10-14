@@ -56,8 +56,7 @@ jobs:
         uses: returntocorp/semgrep-action@v1
         with:
           auditOnInvalidConfig: true
-          env:
-            SEMPGREP_RULES: p/security-audit
+                      
 
       # ❌ PASSO A IMPLEMENTAR — SCA com Grype
       # Dica: primeiro, gere o package-lock pelo npm:
